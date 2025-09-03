@@ -1,10 +1,13 @@
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import {Button } from '../app/auth/button';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -19,7 +22,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+       <head>
+    <meta charSet="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      
         {children}
       </body>
     </html>
