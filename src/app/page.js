@@ -194,6 +194,8 @@ function useLocalStorage(key, initialValue) {
 
     return [value, setStoredValue];
 }
+
+//aplicacion dde lista de tareas
 function TodoApp() {
     const [todos, setTodos] = useState([]);
     const [inputValue, setInputValue] = useState('');
